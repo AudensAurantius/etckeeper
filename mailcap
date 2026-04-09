@@ -152,6 +152,9 @@ text/x-tex; vim %s; needsterminal
 application/x-shellscript; vim %s; needsterminal
 text/x-c; vim %s; needsterminal
 text/x-c++; vim %s; needsterminal
+x-scheme-handler/http; /usr/bin/wslview %s; test=test -n "$DISPLAY"
+x-scheme-handler/https; /usr/bin/wslview %s; test=test -n "$DISPLAY"
+x-scheme-handler/file; /usr/bin/wslview %s; test=test -n "$DISPLAY"
 application/x-xcas; xcas %s; test=test -n "$DISPLAY"
 text/plain; view %s; edit=vim %s; compose=vim %s; test=test -x /usr/bin/vim; needsterminal
 text/plain; gview -f %s; edit=gvim -f %s; compose=gvim -f %s; test=test "$DISPLAY" != ""
