@@ -1,0 +1,231 @@
+###############################################################################
+#
+#  MIME media types and programs that process those types
+#
+#  Much of this file is generated automatically by the program "update-mime".
+#  Please see the "update-mime" man page for more information.
+#
+#  Users can add their own rules if they wish by creating a ".mailcap"
+#  file in their home directory.  Entries included there will take
+#  precedence over those listed here.
+#
+###############################################################################
+
+
+###############################################################################
+#
+#  User section follows:  Any entries included in this section will take
+#  precedence over those created by "update-mime".  DO NOT CHANGE the
+#  "User Section Begins" and "User Section Ends" lines, or anything outside
+#  of this section!
+#
+
+# ----- User Section Begins ----- #
+# -----  User Section Ends  ----- #
+
+###############################################################################
+
+text/plain; less %s; needsterminal
+application/x-troff-man; /usr/bin/man -X100 -l %s; test=test -n "$DISPLAY" -a -e /usr/bin/gxditview; description=Man page
+text/troff; /usr/bin/man -X100 -l %s; test=test -n "$DISPLAY" -a -e /usr/bin/gxditview; description=Man page
+application/x-troff-man; /usr/bin/man -l %s; needsterminal; description=Man page
+text/troff; /usr/bin/man -l %s; needsterminal; description=Man page
+text/html; /usr/bin/sensible-browser %s; description=HTML Text; nametemplate=%s.html
+application/pdf; /usr/bin/xpdf %s; test=test "$DISPLAY" != ""; description=Portable Document Format; nametemplate=%s.pdf
+application/x-pdf; /usr/bin/xpdf %s; test=test "$DISPLAY" != ""; description=Portable Document Format; nametemplate=%s.pdf
+application/x-troff-man; /usr/bin/nroff -mandoc -Tutf8; copiousoutput; print=/usr/bin/nroff -mandoc -Tutf8 | print text/plain:-
+text/troff; /usr/bin/nroff -mandoc -Tutf8; copiousoutput; print=/usr/bin/nroff -mandoc -Tutf8 | print text/plain:-
+application/mbox; mutt -Rf %s; edit=mutt -f %s; needsterminal
+message/rfc822; neomutt -Rf %s; edit=neomutt -f %s; needsterminal
+application/x-dvi; /usr/bin/xdvi %s; description=TeX DVI; test=test -n "$DISPLAY"; nametemplate=%s.dvi
+text/plain; more %s; needsterminal
+application/ogg; ogg123 %s; description="Ogg Vorbis multimedia format"
+audio/ogg; ogg123 %s; description="Ogg Vorbis multimedia format"
+image/avs; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/bie; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/x-ms-bmp; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/cmyk; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/dcx; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/eps; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/fax; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/fits; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/gif; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/gray; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/jpeg; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/pjpeg; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/miff; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/mono; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/mtv; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/x-portable-bitmap; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/pcd; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/pcx; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/pdf; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/x-portable-graymap; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/pict; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/png; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/x-portable-anymap; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/x-portable-pixmap; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/ps; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/rad; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/x-rgb; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/rgba; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/rla; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/rle; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/sgi; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/sun-raster; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/targa; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/tiff; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/uyvy; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/vid; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/viff; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/x-xbitmap; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/x-xpixmap; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/x-xwindowdump; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/x-icon; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+image/yuv; /usr/bin/display-im6.q16 -nostdin %s; test=test -n "$DISPLAY"
+application/x-fluid; fluid %s; test=test -n "$DISPLAY"
+application/pkcs12; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkcs12+pem; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkcs7-mime; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkcs7-mime+pem; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkcs8; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkcs8+pem; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkix-cert; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkix-cert+pem; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkix-crl; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkix-crl+pem; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/x-pem-file; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/x-pem-key; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/x-pkcs12; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/x-pkcs7-certificates; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/x-x509-ca-cert; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/x-x509-user-cert; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkcs10; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/pkcs10+pem; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/x-spkac; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+application/x-spkac+base64; /usr/bin/gcr-viewer %s; test=test -n "$DISPLAY"
+text/english; gvim -f %s; test=test -n "$DISPLAY"
+text/plain; gvim -f %s; test=test -n "$DISPLAY"
+text/x-makefile; gvim -f %s; test=test -n "$DISPLAY"
+text/x-c++hdr; gvim -f %s; test=test -n "$DISPLAY"
+text/x-c++src; gvim -f %s; test=test -n "$DISPLAY"
+text/x-chdr; gvim -f %s; test=test -n "$DISPLAY"
+text/x-csrc; gvim -f %s; test=test -n "$DISPLAY"
+text/x-java; gvim -f %s; test=test -n "$DISPLAY"
+text/x-moc; gvim -f %s; test=test -n "$DISPLAY"
+text/x-pascal; gvim -f %s; test=test -n "$DISPLAY"
+text/x-tcl; gvim -f %s; test=test -n "$DISPLAY"
+text/x-tex; gvim -f %s; test=test -n "$DISPLAY"
+application/x-shellscript; gvim -f %s; test=test -n "$DISPLAY"
+text/x-c; gvim -f %s; test=test -n "$DISPLAY"
+text/x-c++; gvim -f %s; test=test -n "$DISPLAY"
+chemical/x-cif; jmol %s; test=test -n "$DISPLAY"
+chemical/x-cml; jmol %s; test=test -n "$DISPLAY"
+chemical/x-gamess-output; jmol %s; test=test -n "$DISPLAY"
+chemical/x-gaussian-log; jmol %s; test=test -n "$DISPLAY"
+chemical/x-mopac-out; jmol %s; test=test -n "$DISPLAY"
+chemical/x-pdb; jmol %s; test=test -n "$DISPLAY"
+chemical/x-xyz; jmol %s; test=test -n "$DISPLAY"
+chemical/x-gaussian-cube; jmol %s; test=test -n "$DISPLAY"
+chemical/x-qchem-output; jmol %s; test=test -n "$DISPLAY"
+application/x-ipynb+json; jupyter-notebook %s; needsterminal
+application/x-ms-dos-executable; mono %s; test=test -n "$DISPLAY"
+application/x-ms-dos-executable; mono %s; needsterminal
+x-scheme-handler/mailto; notmuch-emacs-mua --hello %s; test=test -n "$DISPLAY"
+text/x-puredata; pd-gui %s; test=test -n "$DISPLAY"
+application/pdf; zathura %s; test=test -n "$DISPLAY"
+x-scheme-handler/dash; zeal %s; test=test -n "$DISPLAY"
+x-scheme-handler/dash-plugin; zeal %s; test=test -n "$DISPLAY"
+inode/directory; ranger %s; needsterminal
+text/english; vim %s; needsterminal
+text/plain; vim %s; needsterminal
+text/x-makefile; vim %s; needsterminal
+text/x-c++hdr; vim %s; needsterminal
+text/x-c++src; vim %s; needsterminal
+text/x-chdr; vim %s; needsterminal
+text/x-csrc; vim %s; needsterminal
+text/x-java; vim %s; needsterminal
+text/x-moc; vim %s; needsterminal
+text/x-pascal; vim %s; needsterminal
+text/x-tcl; vim %s; needsterminal
+text/x-tex; vim %s; needsterminal
+application/x-shellscript; vim %s; needsterminal
+text/x-c; vim %s; needsterminal
+text/x-c++; vim %s; needsterminal
+application/x-xcas; xcas %s; test=test -n "$DISPLAY"
+text/plain; view %s; edit=vim %s; compose=vim %s; test=test -x /usr/bin/vim; needsterminal
+text/plain; gview -f %s; edit=gvim -f %s; compose=gvim -f %s; test=test "$DISPLAY" != ""
+text/html; /usr/bin/w3m -T text/html %s; needsterminal; description=HTML Text; nametemplate=%s.html
+text/html; /usr/bin/lynx -force_html %s; needsterminal; description=HTML Text; nametemplate=%s.html
+application/x-dvi; /usr/bin/dvi2tty -q %s; copiousoutput; description=TeX DVI
+application/zip; unzip -l %s; nametemplate=%s.zip; copiousoutput
+text/plain; view %s; edit=vi %s; compose=vi %s; needsterminal
+text/html; /usr/bin/w3m -I %{charset} -dump -T text/html %s; copiousoutput; description=HTML Text; nametemplate=%s.html
+image/gif; feh %s; test=test -n "$DISPLAY" ; description=GIF Image; nametemplate=%s.gif
+image/jpeg; feh %s; test=test -n "$DISPLAY" ; description=JPEG Image; nametemplate=%s.jpeg
+image/png; feh %s; test=test -n "$DISPLAY" ; description=PNG Image; nametemplate=%s.png
+image/tiff; feh %s; test=test -n "$DISPLAY" ; description=TIFF Image; nametemplate=%s.tiff
+image/x-portable-anymap; feh %s; test=test -n "$DISPLAY" ; description=PNM Image; nametemplate=%s.pnm
+image/targa; feh %s; test=test -n "$DISPLAY" ; description=TGA Image; nametemplate=%s.tga
+image/x-ms-bmp; feh %s; test=test -n "$DISPLAY" ; description=BMP Image; nametemplate=%s.bmp
+image/x-xpixmap; feh %s; test=test -n "$DISPLAY" ; description=XPM Image; nametemplate=%s.xpm
+image/pjpeg; feh %s; test=test -n "$DISPLAY" ; description=JPEG Image; nametemplate=%s.jpeg
+image/avs; display-im6.q16. 'avs:%s'; test=test -n "$DISPLAY"
+image/bie; display-im6.q16 'jbig:%s'; test=test -n "$DISPLAY"
+image/x-ms-bmp; display-im6.q16 'bmp:%s'; test=test -n "$DISPLAY"
+image/cmyk; display-im6.q16 'cmyk:%s'; test=test -n "$DISPLAY"
+image/dcx; display-im6.q16 'dcx:%s'; test=test -n "$DISPLAY"
+image/eps; display-im6.q16 'eps:%s'; test=test -n "$DISPLAY"
+image/fax; display-im6.q16 'fax:%s'; test=test -n "$DISPLAY"
+image/fits; display-im6.q16 'fits:%s'; test=test -n "$DISPLAY"
+image/gif; display-im6.q16 'gif:%s'; test=test -n "$DISPLAY"
+image/gray; display-im6.q16 'gray:%s'; test=test -n "$DISPLAY"
+image/jpeg; display-im6.q16 'jpeg:%s'; test=test -n "$DISPLAY"
+image/pjpeg; display-im6.q16 'jpeg:%s'; test=test -n "$DISPLAY"
+image/miff; display-im6.q16 'miff:%s'; test=test -n "$DISPLAY"
+image/mono; display-im6.q16 'mono:%s'; test=test -n "$DISPLAY"
+image/mtv; display-im6.q16 'mtv:%s'; test=test -n "$DISPLAY"
+image/x-portable-bitmap; display-im6.q16 'pbm:%s'; test=test -n "$DISPLAY"
+image/pcd; display-im6.q16 'pcd:%s'; test=test -n "$DISPLAY"
+image/pcx; display-im6.q16 'pcx:%s'; test=test -n "$DISPLAY"
+image/pdf; display-im6.q16 'pdf:%s'; test=test -n "$DISPLAY"
+image/x-portable-graymap; display-im6.q16 'pgm:%s'; test=test -n "$DISPLAY"
+image/pict; display-im6.q16 'pict:%s'; test=test -n "$DISPLAY"
+image/png; display-im6.q16 'png:%s'; test=test -n "$DISPLAY"
+image/x-portable-anymap; display-im6.q16 'pnm:%s'; test=test -n "$DISPLAY"
+image/x-portable-pixmap; display-im6.q16 'ppm:%s'; test=test -n "$DISPLAY"
+image/ps; display-im6.q16 'ps:%s'; test=test -n "$DISPLAY"
+image/rad; display-im6.q16 'rad:%s'; test=test -n "$DISPLAY"
+image/x-rgb; display-im6.q16 'rgb:%s'; test=test -n "$DISPLAY"
+image/rgba; display-im6.q16 'rgba:%s'; test=test -n "$DISPLAY"
+image/rla; display-im6.q16 'rla:%s'; test=test -n "$DISPLAY"
+image/rle; display-im6.q16 'rle:%s'; test=test -n "$DISPLAY"
+image/sgi; display-im6.q16 'sgi:%s'; test=test -n "$DISPLAY"
+image/sun-raster; display-im6.q16 'sun:%s'; test=test -n "$DISPLAY"
+image/targa; display-im6.q16 'tga:%s'; test=test -n "$DISPLAY"
+image/tiff; display-im6.q16 'tiff:%s'; test=test -n "$DISPLAY"
+image/uyvy; display-im6.q16 'uyvy:%s'; test=test -n "$DISPLAY"
+image/vid; display-im6.q16 'vid:%s'; test=test -n "$DISPLAY"
+image/viff; display-im6.q16 'viff:%s'; test=test -n "$DISPLAY"
+image/x-xbitmap; display-im6.q16 'xbm:%s'; test=test -n "$DISPLAY"
+image/x-xpixmap; display-im6.q16 'xpm:%s'; test=test -n "$DISPLAY"
+image/x-xwindowdump; display-im6.q16 'xwd:%s'; test=test -n "$DISPLAY"
+image/x-icon; display-im6.q16 'icon:%s'; test=test -n "$DISPLAY"
+image/yuv; display-im6.q16 'yuv:%s'; test=test -n "$DISPLAY"
+text/html; /usr/bin/lynx -dump -force_html %s; copiousoutput; description=HTML Text; nametemplate=%s.html
+application/x-troff-man; /usr/bin/man -Tascii -l %s | col -b; copiousoutput; description=Man page
+text/troff; /usr/bin/man -Tascii -l %s | col -b; copiousoutput; description=Man page
+text/x-puredata; pd-gui %s; edit=pd-gui %s; test=test "$DISPLAY" != ""
+text/x-maxmsp; pd-gui %s; edit=pd-gui %s; test=test "$DISPLAY" != ""
+text/*; less %s; needsterminal
+text/*; view %s; edit=vim %s; compose=vim %s; test=test -x /usr/bin/vim; needsterminal
+text/*; gview -f %s; edit=gvim -f %s; compose=gvim -f %s; test=test "$DISPLAY" != ""
+application/x-tar; /bin/tar tvf %s; print=/bin/tar tvf - | print text/plain:-; copiousoutput
+application/x-gtar; /bin/tar tvf %s; print=/bin/tar tvf - | print text/plain:-; copiousoutput
+application/x-ustar; /bin/tar tvf %s; print=/bin/tar tvf - | print text/plain:-; copiousoutput
+application/ogg; ogginfo %s; copiousoutput; description="Ogg Vorbis multimedia format"
+audio/ogg; ogginfo %s; copiousoutput
+video/ogg; ogginfo %s; copiousoutput
+text/*; more %s; needsterminal
+text/*; view %s; edit=vi %s; compose=vi %s; needsterminal
+application/vnd.debian.binary-package; /usr/lib/mime/debian-view %s; needsterminal; description=Debian GNU/Linux Package; nametemplate=%s.deb

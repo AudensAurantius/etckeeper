@@ -1,0 +1,2 @@
+Debian GNU/Linux      Copyright (C) 1993-1999 Software in the Public Interest
+-----------------------------------------------------------------------------

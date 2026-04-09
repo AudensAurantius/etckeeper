@@ -1,0 +1,5 @@
+#!/bin/sh
+
+if [ -x /etc/init.d/fetchmail ] && [ -n "$(pidof fetchmail)" ]; then
+    /usr/sbin/invoke-rc.d --quiet fetchmail awaken
+fi

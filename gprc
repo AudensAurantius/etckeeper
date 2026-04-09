@@ -1,0 +1,43 @@
+\\ Enable colors.
+\\ Should not be set under Emacs, since it use it's own highligth system
+\\ For a system-wide config, clear background is preferable
+#ifnot EMACS colors = lightbg
+\\ dark background:
+\\   #ifnot EMACS colors = darkbg
+
+\\ Limit output of commands to first 40 lines to avoid terminal 
+\\ choking on thousands lines output.
+lines = 40
+
+\\ Save GP history between session.
+histfile = "~/.gp_history"
+
+\\ Set maximal stack size. A safe value is half of the system memory.
+\\ parisizemax = 1G
+
+\\ Limit PARI threads stack size to 100 Mbytes = 10^8 bytes
+\\ threadsizemax = 100M
+
+\\********************** FORMAT OF THIS FILE :    ***************************
+\\  Lines starting with '\\' and between '/*' '*/' pairs are comments
+\\  Blank lines are ignored
+\\  Line starting with #if KEYWORD is read iff KEYWORD is TRUE
+\\  Currently recognized keywords:
+\\    EMACS  are we running under Emacs?
+\\    READL  is readline available?
+\\
+\\  This file should be put in $HOME/.gprc or /etc/gprc and contain:
+\\  * references to gp scripts that are to be run BEFORE the first gp prompt.
+\\
+\\    Syntax: read "filename"  (quotes are mandatory. ~ syntax allowed)
+\\
+\\  * variable definitions (so-called "environment variables" in the sequel)
+\\
+\\   Definitions are overruled by command line switches. For instance
+\\     invoking gp -s 100 will set environment variable stacksize to 100 (not
+\\     a very bright thing to do by the way), regardless of what is in .gprc
+\\
+\\    Syntax: variable name = value
+\\
+\\  Environment variables which are not set here assume default values in gp.
+\\  Can be changed under GP using default(), or keyboard shortcuts (see ?\).

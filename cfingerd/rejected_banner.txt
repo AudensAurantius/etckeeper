@@ -1,0 +1,9 @@
+
+Debian GNU/Linux      Copyright (c) 1993-1999 Software in the Public Interest
+
+$center Your site has been rejected for some reason.
+
+$center This may be caused by a missing RFC 1413 identd on your site.
+
+$center Contact your and/or our system administrator.
+

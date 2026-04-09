@@ -1,0 +1,14 @@
+#! /bin/sh
+#
+# cron script to rotate cfingerd log files.
+#
+# Writen by Martin Schulze <joey@infodrom.org>.
+
+cd /var/log
+for LOG in cfingerd.log
+do
+   if [ -f "$LOG" ]; then
+      savelog -g adm -m 644 -u root -c 4 $LOG >/dev/null
+   fi
+done
+

@@ -1,0 +1,7 @@
+
+Debian GNU/Linux      Copyright (c) 1993-1999 Software in the Public Interest
+
+$center You haven't specified a user.
+
+$center A general listing is not provided to the public.
+

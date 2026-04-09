@@ -1,0 +1,64 @@
+# AppArmor profile for WordPress
+#
+# Last Changed: 2022-03-15
+# Author: Craig Small <csmall@debian.org>
+#
+# To update: sudo apparmor_parser -r /etc/apparmor.d/usr.sbin.apache2
+
+
+^wordpress {
+  include <abstractions/apache2-common>
+  include <abstractions/base>
+  include <abstractions/nameservice>
+  include <abstractions/php5>
+  include <abstractions/ssl_certs>
+  include <abstractions/openssl>
+
+  include if exists <local/apache-wordpress>
+
+  @{sys}/devices/system/node/ r,
+  @{sys}/devices/system/node/node[0-9]*/meminfo r,
+
+  # To make email work
+  /bin/dash rix,
+  /usr/sbin/sendmail rix,
+  /usr/sbin/postdrop rix,
+  /etc/postfix/** r,
+  /etc/mailname r,
+  /var/spool/postfix/** rw,
+
+  # ImageMagick
+  /etc/ImageMagick-6/*.xml r,
+  /usr/share/ImageMagick-6/*.xml r,
+
+  /var/log/apache2/*.log w,
+  /etc/wordpress/config-*.php r,
+  /etc/wordpress/htaccess r,
+  /usr/share/wordpress r,
+  /usr/share/wordpress/** r,
+  /usr/share/wordpress/.maintenance w,
+  /usr/share/javascript/** r,
+
+  # Change "/var/lib/wordpress/wp-content" to whatever you set
+  # WP_CONTENT_DIR in the # /etc/wordpress/config-*.php file
+  /var/lib/wordpress/wp-content r,
+  /var/lib/wordpress/wp-content/ r,
+  /var/lib/wordpress/wp-content/** r,
+  /var/lib/wordpress/wp-content/{cache,uploads,upgrade}/** rwk,
+
+  # Uncomment to permit plugins Install/Update via web
+  /var/lib/wordpress/wp-content/plugins/** rw,
+  /var/lib/wordpress/wp-content/languages/** rw,
+  # Uncomment to permit themes Install/Update via web
+  /var/lib/wordpress/wp-content/themes/** rw,
+
+  # Second content dir
+#  /var/lib/wordpress/test-wp-content r,
+#  /var/lib/wordpress/test-wp-content/** r,
+#  /var/lib/wordpress/test-wp-content/uploads/** rw,
+#  /var/lib/wordpress/test-wp-content/upgrade/** rw,
+
+  # This is what PHP sys_get_temp_dir() returns
+  owner /tmp/* rwk,
+}
+
