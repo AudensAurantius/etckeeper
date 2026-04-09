@@ -1,0 +1,25 @@
+# Root-only files that are NOT secret and do not need git-crypt encryption.
+# One path or glob pattern per line. Checked by pre-commit.d/40check-secrets.
+# If a root-only tracked file is not in this list AND not encrypted, the commit is blocked.
+
+# etckeeper metadata
+.etckeeper
+.pwd.lock
+
+# Privilege/policy rules (not credentials)
+sudoers
+sudoers.d/*
+
+# CA trust store config
+default/cacerts
+
+# Mail relay rules and configs (not credentials)
+mail/access
+mail/access.db
+mail/aliases.db
+mail/m4/dialup.m4
+mail/m4/provider.m4
+mail/tls/sendmail-client.cfg
+mail/tls/sendmail-client.csr
+mail/tls/sendmail-server.cfg
+mail/tls/sendmail-server.csr
