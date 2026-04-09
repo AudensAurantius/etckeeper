@@ -1,0 +1,20 @@
+# Password hashes
+shadow filter=git-crypt diff=git-crypt
+shadow- filter=git-crypt diff=git-crypt
+gshadow filter=git-crypt diff=git-crypt
+gshadow- filter=git-crypt diff=git-crypt
+security/opasswd filter=git-crypt diff=git-crypt
+
+# SMTP and mail
+exim4/passwd.client filter=git-crypt diff=git-crypt
+mail/tls/sendmail-common.key filter=git-crypt diff=git-crypt
+mail/tls/sendmail-common.prm filter=git-crypt diff=git-crypt
+
+# Docker
+docker/key.json filter=git-crypt diff=git-crypt
+
+# MySQL
+mysql/debian.cnf filter=git-crypt diff=git-crypt
+
+# SSL
+ssl/private/** filter=git-crypt diff=git-crypt
